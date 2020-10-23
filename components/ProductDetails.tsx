@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function ProductDetails({ productDetail }) {
-    console.log(productDetail);
+export default function ProductDetails({ productDetail = {} }) {
     return (
         <div>
             <div className="d-flex justify-content-center">
