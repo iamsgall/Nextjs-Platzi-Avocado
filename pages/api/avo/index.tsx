@@ -1,15 +1,10 @@
-import { IncomingMessage, ServerResponse } from "http";
+import { NextApiRequest, NextApiResponse } from "next";
 import DB from '@database'
 
-const AllAvos = async (req: IncomingMessage, res: ServerResponse) => {
+const AllAvos = async (req: NextApiRequest, res: NextApiResponse) => {
     const db = new DB()
     const allEntries = await db.getAll()
-    const length = allEntries.length
-
-    res.statusCode = 200 //ok
-    res.setHeader('Content-type', 'application/json')
-    res.end(JSON.stringify({ message: allEntries, length }))
-
+    res.json(allEntries)
 }
 
 export default AllAvos;
