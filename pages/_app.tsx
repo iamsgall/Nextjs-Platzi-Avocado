@@ -1,6 +1,7 @@
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app'
 import Layout from '@components/Layout'
+import '../utils/fontawesome'
 
 function MyApp({ Component, pageProps }: AppProps) {
   // LAYOUT

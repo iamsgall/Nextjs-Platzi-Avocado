@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import ProductList from '@components/ProductList';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import API from '../utils/API';
@@ -19,10 +19,6 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      {productList.map(product => (
-        <p key={product?.id}>{product?.name}</p>
-      ))}
-    </div>
+    <ProductList productList={productList} />
   );
 }

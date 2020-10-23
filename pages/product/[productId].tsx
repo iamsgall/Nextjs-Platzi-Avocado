@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import API from '../../utils/API';
+import ProductDetails from '@components/ProductDetails'
 
 export default function ProductItem() {
   const {
@@ -21,5 +22,5 @@ export default function ProductItem() {
     getData();
   }, [productId]);
 
-  return <div>{avo?.name}</div>;
+  return <ProductDetails productDetail={avo} />;
 }
