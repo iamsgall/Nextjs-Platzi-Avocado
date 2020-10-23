@@ -8,7 +8,6 @@ export default function ProductItem() {
   } = useRouter();
 
   const [avo, setAvo] = useState<TProduct>();
-  console.log(avo);
 
   useEffect(() => {
     const getData = async () => {
