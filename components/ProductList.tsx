@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-export default function ProductList({ productList }) {
+export default function ProductList({ productList }: any) {
     return (
         <div className="container">
             <div className="row">
-                {productList.map(product => (
+                {productList.map((product: any) => (
                     <Link key={product.id} href={`/product/${product.id}`}>
                         <div className="card mb-3 mx-2" style={{ maxWidth: 540, cursor: 'pointer' }}>
                             <div className="row no-gutters">

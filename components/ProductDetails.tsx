@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function ProductDetails({ productDetail = {} }) {
+export default function ProductDetails({ productDetail }: any) {
     return (
         <div>
             <div className="d-flex justify-content-center">
@@ -33,7 +33,7 @@ export default function ProductDetails({ productDetail = {} }) {
             <div className="container">
                 <table className="table table-bordered">
                     <thead className="table-success font-weight-bold">
-                        <td colSpan="2">Attributes</td>
+                        <td >Attributes</td>
                     </thead>
                     <tbody>
                         <tr>
